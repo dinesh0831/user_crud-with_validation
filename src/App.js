@@ -68,8 +68,8 @@ class App extends React.Component {
 
     this.setState({ [name]: value })
     let errors={}
-    if (this.state.name.length < 5 ||
-      this.state.name.length > 25) {
+    if (this.state.email.length <8 ||
+      this.state.email.length > 25) {
       errors["email"] = "email not valid";
     } else errors["email"] = "";
 
