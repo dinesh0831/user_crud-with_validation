@@ -68,7 +68,8 @@ class App extends React.Component {
 
     this.setState({ [name]: value })
     let errors={}
-    if (!this.state.email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+    if (this.state.name.length < 5 ||
+      this.state.name.length > 25) {
       errors["email"] = "email not valid";
     } else errors["email"] = "";
 
