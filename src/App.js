@@ -64,11 +64,11 @@ class App extends React.Component {
     this.getUser()
   }
  handleChange = ({ target: { name, value } }) => {
-    var mail=^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$
+   
 
     this.setState({ [name]: value })
     let errors={}
-    if (!mail.test(this.state.email)) {
+    if (!this.state.email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ )) {
       errors["email"] = "email not valid";
     } else errors["email"] = "";
 
