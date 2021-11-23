@@ -64,7 +64,7 @@ class App extends React.Component {
     this.getUser()
   }
  handleChange = ({ target: { name, value } }) => {
-    var mail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    var mail=^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$
 
     this.setState({ [name]: value })
     let errors={}
